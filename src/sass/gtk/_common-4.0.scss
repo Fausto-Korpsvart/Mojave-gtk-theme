@@ -2152,6 +2152,8 @@ treeview.view {
       border-top-color: rgba($fg_color, 0.15); // doesn't work unfortunately
 
       @extend %selected_items;
+
+      menuitem { color: $fg_color; }
     }
   }
 
@@ -3976,8 +3978,14 @@ expander {
     -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
 
     &:dir(rtl) { -gtk-icon-source: -gtk-icontheme('pan-end-symbolic-rtl'); }
-    &:hover { color: lighten($fg_color,30%); } //only lightens the arrow
+    &:hover { color: lighten($fg_color, 30%); } //only lightens the arrow
     &:checked { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
+  }
+
+  *:selected & {
+    &, arrow {
+      &, &:hover, &:focus { color: $selected_fg_color; }
+    }
   }
 }
 
