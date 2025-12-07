@@ -158,11 +158,6 @@ gridview {
 
       @extend %selected_items;
     }
-
-    box { //cells
-      border-spacing: 8px; //label separation
-      margin: 12px;
-    }
   }
 }
 
@@ -945,7 +940,7 @@ splitbutton {
     > entry + entry.warning { border-#{$_border}-color: if($var=='light', $warning_color, $e_border); }
 
     > entry.error + entry.warning,
-    > entry.warning + entry.error { border-#{$_border}-color: if($var=='light', mix($error_color, $warning_color, 50%), $e_border);}
+    > entry.warning + entry.error { border-#{$_border}-color: if($var=='light', mix($error_color, $warning_color, 50%), $e_border); }
 
     @each $e_type, $e_color in (':focus-within', $entry_highlight),
                                (':drop(active)', $drop_target_color),

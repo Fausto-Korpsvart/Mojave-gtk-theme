@@ -73,6 +73,14 @@
         margin-left: -6px;
       }
     }
+
+    box > stack {
+      margin: -3px 0;
+    }
+
+    .linked > entry {
+      margin: 0;
+    }
   }
 
   flap.unfolded {
@@ -150,7 +158,7 @@ child.activatable {
     padding: 0;
 
     #NautilusViewCell {
-      padding: 0;
+      padding: $base_padding;
 
       .icon-ui-labels-box {
         margin: 0 0 $base_padding * 2;
@@ -203,7 +211,6 @@ child.activatable {
 
 #NautilusQueryEditor {
   // search entry
-  padding: 0 6px;
   margin: 0;
   border-spacing: 4px;
   border-radius: $bt_radius;
@@ -211,7 +218,6 @@ child.activatable {
   border-image: none;
   outline: 0 solid transparent;
   outline-offset: -2px;
-  min-height: if($variant =='light', 20px, 22px);
 
   @if $variant =='light' {
     border: 1px solid $borders_color;
